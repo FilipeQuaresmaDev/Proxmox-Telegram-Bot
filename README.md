@@ -21,41 +21,48 @@ maquinas virtuais/ Containers LXC, verificar uso de recursos, logs e também ger
 
 # 1 - Instalação em Container LXC dentro do proxmox
 
-  1.1 Criar Container LXC
-   *Criate CT
-   *Template: Debian 12 ou Ubuntu 22.04
-   *Hostname: SUA ESCOLHA
-   *CPU: 1 core
-   *RAM: 512MB
-   *Disco: 8GB
-   *Network: bridge
+# 1.1 Criar Container LXC
+   * Criate CT
+   * Template: Debian 12 ou Ubuntu 22.04
+   * Hostname: SUA ESCOLHA
+   * CPU: 1 core
+   * RAM: 512MB
+   * Disco: 8GB
+   * Network: bridge
 
- # 1.2 Acessar Container
-   * atualizar sistema
+# 1.2 Acessar Container
+   
+   * atualizar sistema
+  
+  ````bash
+     apt update && apt upgrade -y
+  ````
  
-    - apt update && apt upgrade -y
- 
-   * Instalar pacotes
- 
-    - apt install -y \
+   
+   * Instalar pacotes
+````bash
+      apt install -y \
         curl \
         git \
         openssh-client \
         python3 \
         python3-venv \
         python3-pip \
-
+````
 # 1.3 Criar ssh do BOT
-    * comando
- 
-     - ssh-keygen -t ed25519 -f /root/.ssh/id_25519 -C "USER_BOT"
-
-     assim que aparecer para definir passphrase apenas aperte ENTER
+    Execute o comando
+  
+  ````bash
+     ssh-keygen -t ed25519 -f /root/.ssh/id_25519 -C "USER_BOT"
+   ````
+  assim que aparecer para definir passphrase apenas aperte ENTER
 
 # 1.4 Verificação
  Ainda na maquina do BOT execute o comando:
 
-   - ls /root/.ssh
+````bash
+   ls /root/.ssh
+````
 
 Deve aparecer:
 
@@ -152,24 +159,24 @@ Deve entrar sem pedir senha, se entrar quer dizer que funcionou.
 Volte no console da maquina do bot e execute os comandos:
 
   
-  ```
+  ````bash
      mkdir -p /opt/bot
      cd /opt/bot
-  ```
+  ````
 
 
 Nisso você irá para dentro do diretório e dentro dele que iremos trabalhar. Execute
 
-  ```
+  ````bash
     git clone https://github.com/FilipeQuaresmaDev/Proxmox-Telegram-Bot.git
-  ```
+  ````
 
 Após isso iremos criar o ambiente virtual python. execute.
 
-   ```
+   ````bash
      python3 -m venv venv
      source venv/bin/activate
-   ```
+   ````
 
 Nisso entrará no ambiente virtual python.
 
@@ -182,10 +189,10 @@ EXPLICAÇÃO: Por algum motivo quando se estar dentro de um Container LXC ele n�
 Após isso execute esse comando para instalar todas as dependências necessárias:
 
 
-```
+````bash
       pip install --upgrade pip
       pip install -r requirements.txt
-```
+````
 
 
 Após isso, todas as dependências foram instaladas.
