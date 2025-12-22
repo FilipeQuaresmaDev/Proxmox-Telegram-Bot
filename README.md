@@ -34,20 +34,20 @@ maquinas virtuais/ Containers LXC, verificar uso de recursos, logs e também ger
    
    * atualizar sistema
   
-  ````bash
-     apt update && apt upgrade -y
-  ````
+````bash
+> apt update && apt upgrade -y
+````
  
    
    * Instalar pacotes
 ````bash
-      apt install -y \
-        curl \
-        git \
-        openssh-client \
-        python3 \
-        python3-venv \
-        python3-pip \
+> apt install -y \
+    curl \
+    git \
+    openssh-client \
+    python3 \
+    python3-venv \
+    python3-pip \
 ````
 # 1.3 Criar ssh do BOT
     Execute o comando
