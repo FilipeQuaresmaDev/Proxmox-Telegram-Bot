@@ -1,0 +1,7 @@
+python-telegram-bot==20.8
+proxmoxer==2.0.1
+requests>=2.31.0
+paramiko>=3.4.0
+reportlab>=4.1.0
+python-dateutil>=2.9.0
+tzlocal>=5.2

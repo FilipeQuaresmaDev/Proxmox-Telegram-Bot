@@ -1,0 +1,20 @@
+services:
+  proxmox-bot:
+    image: proxmox-telegram-bot:latest
+    container_name: proxmox-telegram-bot
+    restart: unless-stopped
+
+    environment:
+      BOT_TELEGRAM_TOKEN: "TOKEN_DO_BOT_DO_TELEGRAM"
+      TELEGRAM_ID: "123456789"
+
+      PROXMOX_HOST: "IP_PROXMOX"
+      PROXMOX_USER: "USER_BOT@pve"
+      PROXMOX_TOKEN_NAME: "USER_BOT"
+      PROXMOX_TOKEN_VALUE: "TOKEN_AQUI"
+
+      SSH_USER: "USER_BOT"
+
+    volumes:
+      - ./logs:/app/logs
+      - ./ssh:/root/.ssh   # 🔑 persistência da chave
