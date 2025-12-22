@@ -169,8 +169,10 @@ EXPLICAÇÃO: Por algum motivo quando se estar dentro de um Container LXC ele n�
 
 Após isso execute esse comando para instalar todas as dependências necessárias:
 
-   ```# pip install --upgrade pip
-     pip install -r requirements.txt```
+   ```bash
+      pip install --upgrade pip
+      pip install -r requirements.txt
+     ```
 
 Após isso, todas as dependências foram instaladas.
 
