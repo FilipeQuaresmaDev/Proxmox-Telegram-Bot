@@ -151,28 +151,42 @@ Deve entrar sem pedir senha, se entrar quer dizer que funcionou.
 
 Volte no console da maquina do bot e execute os comandos:
 
-   - mkdir -p /opt/bot
+  
+  ```
+     mkdir -p /opt/bot
      cd /opt/bot
+  ```
+
 
 Nisso você irá para dentro do diretório e dentro dele que iremos trabalhar. Execute
 
-   - git clone
+  ```
+    git clone https://github.com/FilipeQuaresmaDev/Proxmox-Telegram-Bot.git
+  ```
 
 Após isso iremos criar o ambiente virtual python. execute.
 
-   - python3 -m venv venv
+   ```
+     python3 -m venv venv
      source venv/bin/activate
+   ```
 
 Nisso entrará no ambiente virtual python.
+
+
 EXPLICAÇÃO: Por algum motivo quando se estar dentro de um Container LXC ele não permite execução e nem instalação de
             dependências do python para o bot funcionar, então trabalharemos no ambiente virtual SEMPRE.
 
+
+
 Após isso execute esse comando para instalar todas as dependências necessárias:
 
-   ```bash
+
+```
       pip install --upgrade pip
       pip install -r requirements.txt
-     ```
+```
+
 
 Após isso, todas as dependências foram instaladas.
 
