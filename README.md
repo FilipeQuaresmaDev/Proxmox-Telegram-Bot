@@ -299,7 +299,7 @@ será os usuários que posteriormente será criado nas VM's/Container's LXC.
 Crie uma pasta onde será o diretório de trabalho do bot dentro da maquina escolhida onde roda Docker, em seguinda use o comando
 
 ````bash
-    docker pull
+    docker pull filipequaresmadev/proxmox-telegram-bot:v1.0
 ````
 
 isso irá trazer a imagem para dentro da sua maquina dentro do servidor. Após isso, pegue o docker-compose que consta nessa pagina
