@@ -35,7 +35,7 @@ maquinas virtuais/ Containers LXC, verificar uso de recursos, logs e também ger
    * atualizar sistema
   
 ````bash
-> apt update && apt upgrade -y
+apt update && apt upgrade -y
 ````
  
    
