@@ -19,7 +19,7 @@ maquinas virtuais/ Containers LXC, verificar uso de recursos, logs e também ger
              INSTALAÇÃO
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-1 - Instalação em Container LXC dentro do proxmox
+# 1 - Instalação em Container LXC dentro do proxmox
 
   1.1 Criar Container LXC
    *Criate CT
@@ -30,7 +30,7 @@ maquinas virtuais/ Containers LXC, verificar uso de recursos, logs e também ger
    *Disco: 8GB
    *Network: bridge
 
- 1.2 Acessar Container
+ # 1.2 Acessar Container
    * atualizar sistema
  
     - apt update && apt upgrade -y
@@ -45,14 +45,14 @@ maquinas virtuais/ Containers LXC, verificar uso de recursos, logs e também ger
         python3-venv \
         python3-pip \
 
-1.3 Criar ssh do BOT
+# 1.3 Criar ssh do BOT
     * comando
  
      - ssh-keygen -t ed25519 -f /root/.ssh/id_25519 -C "USER_BOT"
 
      assim que aparecer para definir passphrase apenas aperte ENTER
 
-1.4 Verificação
+# 1.4 Verificação
  Ainda na maquina do BOT execute o comando:
 
    - ls /root/.ssh
@@ -69,7 +69,7 @@ após essa confirmação execute
 copie o conteúdo mostrado, essa será a chave pública ssh.
 essa chave será utilizada em todas as máquinas.
 
-1.5 Configurar proxmox
+# 1.5 Configurar proxmox
 
 siga as janelas
 
@@ -100,7 +100,7 @@ Após isso siga novamente
 
 Feito isso, seu token Api e seu Usuário ja está criado e permissionado. Seguindo para o bot no telegram
 
-1.6 - Bot no Telegram
+# 1.6 - Bot no Telegram
 
 Baixe o telegram no celular e inicie uma conversa com o "@BotFather"
 
@@ -121,7 +121,7 @@ Assim que iniciado a conversa ele mostrará seu id do telegram, copie ele.
 EXPLICAÇÃO: Seu id telegram iremos usar como uma medida de segurança, pois com ele o seu bot irá funcionar somente com
             o seu número do telegram e com mais ninguém.
 
-1.7 Cria o usuário do bot em todas as VM'S/Containers LXC
+# 1.7 Cria o usuário do bot em todas as VM'S/Containers LXC
 
 Em cada uma das maquinas você irá repetir exatamente a mesma coisa. Primeiramente execute o comando
 
@@ -147,7 +147,7 @@ Após realizar esses passos nas VM'S/Containers LXC, volte no console da maquina
 
 Deve entrar sem pedir senha, se entrar quer dizer que funcionou.
 
-1.8 Instalar e configurar o bot
+# 1.8 Instalar e configurar o bot
 
 Volte no console da maquina do bot e execute os comandos:
 
@@ -169,12 +169,12 @@ EXPLICAÇÃO: Por algum motivo quando se estar dentro de um Container LXC ele n�
 
 Após isso execute esse comando para instalar todas as dependências necessárias:
 
-   - pip install --upgrade pip
-     pip install -r requirements.txt
+   ```# pip install --upgrade pip
+     pip install -r requirements.txt```
 
 Após isso, todas as dependências foram instaladas.
 
-1.9 Configurar o bot
+# 1.9 Configurar o bot
 
 Iremos mexer em três arquivos "config.py" , "proxmox/client.py" e "executor.py"
 
@@ -206,7 +206,7 @@ Após executar esse comando aparecerá a mensagem dizendo que o bot está ativad
 Vá no telegram, na conversa com seu bot, e comece mandando "/start". Se ele responder com opções para você escolher
 quer dizer que funcionou.
 
-1.10 Inicialização automática do bot ao iniciar maquina
+# 1.10 Inicialização automática do bot ao iniciar maquina
 
 Execute o comando
 
@@ -239,7 +239,7 @@ irá parar caso desligue a maquina.
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=
 
-2. Instalação do bot em container Docker.
+# 2. Instalação do bot em container Docker.
 
 OBS.: O método de bot em container pula os passos 1.1, 1.2, 1.3 e 1.4, pois ao executar o docker-compose ele ja cria tudo para voce somente copiar a "ssh key"
 e o ambiente ja é todo preparado. Tenha em mente que o "USER_BOT" é preferível que ja seja definido por você, pois usaremos ele antes de criar os usuários das vm's
