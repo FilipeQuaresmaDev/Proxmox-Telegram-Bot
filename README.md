@@ -284,7 +284,7 @@ Salve e feche. para ativar execute:
 Após isso o bot está instalado, configurado e sempre irá executar ao iniciar a maquina, reiniciar o bot caso dê algum problema e somente
 irá parar caso desligue a maquina.
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 # 2. Instalação do bot em container Docker.
 
