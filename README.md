@@ -97,7 +97,7 @@ USER@pve -> API Tokens -> Add
 ````
   
   * Token: USER_BOT
-  * marcar quadrado - privilege separation
+  * Desmarcar quadrado - privilege separation
 
 copie o token gerado.
 
